@@ -81,7 +81,7 @@ A continuación se muestra el prototipo de baja fidelidad que se creo para hacer
 
 ---
 
-##User Persona
+## User Persona
 
 Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnología. Trabaja entresemana, por lo cual, espera al fin de semana para desestresarse jugando su videojuego favorito. Usualmente juega solx en casa ya que no tienen tanta facilidad de acordar horarios con otros jugadores. Necesitan algo que los mantenga actualizados que cumpla las siguientes características:
 
@@ -91,7 +91,7 @@ Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnolog�
 - Navegación directa
 - Mobile first
 
-##Pains y Gains
+## Pains y Gains
 
 ### Pains
 - Anuncios
