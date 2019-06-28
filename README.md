@@ -43,7 +43,7 @@ filtrarla, ordenarla y hacer algún cálculo agregado**. Especificamente se busc
 
 ### Información recabada
 
-(img-readme/edad.png)
+![edad](img-readme/edad.png)
 
 (img-readme/sexo.png)
 
