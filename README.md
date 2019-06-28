@@ -45,20 +45,20 @@ filtrarla, ordenarla y hacer algún cálculo agregado**. Especificamente se busc
 
 ![edad](img-readme/edad.png)
 
-(img-readme/sexo.png)
+![sexo](img-readme/sexo.png)
 
-(img-readme/sitios-webs.png)
+![sitios-web](img-readme/sitios-webs.png)
 
-(img-readme/frecuencia.png)
+![frecuencia](img-readme/frecuencia.png)
 
-(img-readme/intereses.png)
+![intereses](img-readme/intereses.png)
 
-(img-readme/conoces.png)
+![conoces](img-readme/conoces.png)
 
 
 ### Prototipo de baja fidelidad
 
-(img-readme/prototipo.png)
+![prototipo](img-readme/prototipo.png)
 
 
 ---
