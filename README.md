@@ -45,6 +45,7 @@ Especificamente se buscará que la página web sea capaz de:
 
 ### Información recabada
 
+<<<<<<< HEAD
 Se realizó la encuesta a 6 hombres y 6 mujeres, 2 de las mujeres no conocían ninguno de los sitios web de noticias de videojuegos y no jugaban videojuegos, por lo cuál, se eliminaron estás encuestas; quedándonos con sólo 10 encuestas de las cuáles se rescató la siguiente información:
 
 El 80% de los usuarios se encuentran entre los 19 y 29 años de edad.
@@ -70,7 +71,6 @@ Los intereses más concurrentes en los usuarios son la noticas sobre actualizaci
 Sólo el 66.7% de los usuarios conocen STEAM.
 
 ![conoces](img-readme/conoces.png)
-
 
 ### Prototipo de baja fidelidad
 
@@ -112,10 +112,3 @@ El usuario busca mantenerse actualizado con la noticias publicadas por su autor 
 - Entra a la página de noticias STEAM
 - Ingresa en la barra de búsqueda el nombre de su autor elegido
 - Se muestran todas las nocitias escritar por el autor ingresado
-
-
-
-
-
-
-
