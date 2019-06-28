@@ -58,7 +58,7 @@ filtrarla, ordenarla y hacer algún cálculo agregado**. Especificamente se busc
 
 ### Prototipo de baja fidelidad
 
-![prototipo](img-readme/prototipo.jpg)
+![prototipo](img-readme/prototipo.jpeg)
 
 
 ---
