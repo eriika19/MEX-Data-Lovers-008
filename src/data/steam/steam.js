@@ -135,3 +135,15 @@ var STEAM = {
     "count": 2587
   }
 };;
+
+window.handleData = {
+  filterData: (str) => {
+    return STEAM.appnews.newsitems.filter(data => {
+      return (data.title.toLowerCase().indexOf(str.toLowerCase()) > -1) +
+              (data.author.toLowerCase().indexOf(str.toLowerCase()) > -1) +
+              (data.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1);
+    });
+  },
+
+
+}
