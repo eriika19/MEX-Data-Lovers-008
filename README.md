@@ -19,13 +19,16 @@ Steam es una de las mejores plataformas a las que acudir para jugar a videojuego
 
 Para utilizarla, lo único que necesitamos es registrarnos en la web oficial de Steam (sin coste alguno), con lo que crearemos una cuenta de usuario a la que asociar todos los videojuegos que compremos. Así, nada más loguearnos en cualquier otro ordenador, dispondremos en él de todos los títulos que hubiésemos adquirido previamente, pudiendo descargarlos cuando deseemos.
 
+![STEAM](img-readme/STEAM.png)
+
 Actualmente, hay más de 3.000 juegos disponibles en Steam y 75 millones de cuentas de usuario activas. En esta plataforma podemos encontrar tanto juegos gratuitos como otros muchos con suculentas ofertas e incluso posibildiad de jugar gratis durante varios días a un juego en promoción.
+
+---
 
 ## Descripción general del proyecto
 
 Este proyecto se trabajó por la dupla conformada por María Itzel Erika Enciso Ibáñez y Monserratt Cuevas Serrano; se busca *construir una _página web_ para visualizar el conjunto de datos de noticias de la página de STEAM*.
 
----
 
 ## Avance
 
@@ -47,9 +50,11 @@ Especificamente se buscará que la página web sea capaz de:
 
 Se realizó la encuesta a 6 hombres y 6 mujeres, 2 de las mujeres no conocían ninguno de los sitios web de noticias de videojuegos y no jugaban videojuegos, por lo cuál, se eliminaron estás encuestas; quedándonos con sólo 10 encuestas de las cuáles se rescató la siguiente información:
 
+
 ![edad](img-readme/edad.png)
 
 El 80% de los usuarios se encuentran entre los 19 y 29 años de edad.
+
 
 
 ![sexo](img-readme/sexo.png)
@@ -57,9 +62,11 @@ El 80% de los usuarios se encuentran entre los 19 y 29 años de edad.
 El 70% de los usuarios se encuentran son hombres. Mientras que el 30% de los usuarios son mujeres.
 
 
+
 ![sitios-web](img-readme/sitios-web.png)
 
 El 60% de los usuarios conocen de 1 a 3 sitios webs de noticias de videojuegos. Mientras que el 30% de los usuarios conocen más de 6.
+
 
 
 ![frecuencia](img-readme/frecuencia.png)
@@ -67,7 +74,9 @@ El 60% de los usuarios conocen de 1 a 3 sitios webs de noticias de videojuegos. 
 El 55.6% de los usuarios visitan de 1 a 3 veces por semana estos sitios. Mientras que el 33.3% de los usuarios los visitan más de 6 veces por semana y aprox el 11% ninguna vez a la semana.
 
 
+
 ![conoces](img-readme/conoces.png)
+
 Sólo el 66.7% de los usuarios conocen STEAM.
 
 
