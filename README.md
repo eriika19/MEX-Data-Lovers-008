@@ -47,38 +47,30 @@ Especificamente se buscará que la página web sea capaz de:
 
 Se realizó la encuesta a 6 hombres y 6 mujeres, 2 de las mujeres no conocían ninguno de los sitios web de noticias de videojuegos y no jugaban videojuegos, por lo cuál, se eliminaron estás encuestas; quedándonos con sólo 10 encuestas de las cuáles se rescató la siguiente información:
 
+![edad](img-readme/edad.png)
 El 80% de los usuarios se encuentran entre los 19 y 29 años de edad.
 
-![edad](img-readme/edad.png)
-
-El 70% de los usuarios se encuentran son hombres. Mientras que el 30% de los usuarios son mujeres.
 
 ![sexo](img-readme/sexo.png)
+El 70% de los usuarios se encuentran son hombres. Mientras que el 30% de los usuarios son mujeres.
 
-El 60% de los usuarios conocen de 1 a 3 sitios webs de noticias de videojuegos. Mientras que el 30% de los usuarios conocen más de 6.
 
 ![sitios-web](img-readme/sitios-web.png)
+El 60% de los usuarios conocen de 1 a 3 sitios webs de noticias de videojuegos. Mientras que el 30% de los usuarios conocen más de 6.
 
-El 55.6% de los usuarios visitan de 1 a 3 veces por semana estos sitios. Mientras que el 33.3% de los usuarios los visitan más de 6 veces por semana y aprox el 11% ninguna vez a la semana.
 
 ![frecuencia](img-readme/frecuencia.png)
+El 55.6% de los usuarios visitan de 1 a 3 veces por semana estos sitios. Mientras que el 33.3% de los usuarios los visitan más de 6 veces por semana y aprox el 11% ninguna vez a la semana.
 
 Los intereses más concurrentes en los usuarios son la noticas sobre actualizaciones de sus juegos favoritos.
 
 ![intereses](img-readme/intereses.png)
+Los intereses más concurrentes en los usuarios son la noticas sobre actualizaciones de sus juegos favoritos.
 
-Sólo el 66.7% de los usuarios conocen STEAM.
 
 ![conoces](img-readme/conoces.png)
+Sólo el 66.7% de los usuarios conocen STEAM.
 
-### Prototipo de baja fidelidad
-
-A continuación se muestra el prototipo de baja fidelidad que se creo para hacer el primer testeo de la interfaz.
-
-![prototipo](img-readme/prototipo.jpeg)
-
-
----
 
 ## User Persona
 
@@ -106,8 +98,14 @@ Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnolog�
 
 ## Historias de usuario
 
-El usuario busca mantenerse actualizado con la noticias publicadas por su autor favorito:
+Yo usuario busco mantenerme actualizadx con la noticias publicadas por mi autor o bloggerx favoritx:
 
-- Entra a la página de noticias STEAM
-- Ingresa en la barra de búsqueda el nombre de su autor elegido
-- Se muestran todas las nocitias escritar por el autor ingresado
+- Entro a la _página web_ de noticias STEAM
+- Localizo la barra de búsqueda e ingreso el nombre de mi autor / bloggerx favoritx
+- El sitio muestra un listado de todas las noticias de mi autor / bloggerx favoritx
+
+## Prototipo de baja fidelidad
+
+A continuación se muestra el prototipo de baja fidelidad que se creo para hacer el primer testeo de la interfaz.
+
+![prototipo](img-readme/prototipo.jpeg)
