@@ -135,27 +135,3 @@ var STEAM = {
     "count": 2587
   }
 };;
-
-
-//objeto de funciones para manipular data
-window.handleData = {
-  filterData: (str) => {
-    //creamos un array donde cada plabra es un elemento
-    let words = str.split(" ");
-    //programamos un bucle para evaluar cada elemento(e) del array 'words'
-    words.forEach(e => {
-      //programamos un filtro para cada data dentro de 'newsitems'
-      return STEAM.appnews.newsitems.filter(data => {
-        //se evalua la existecia de cada elemento(e) del array 'words' en la data de las propiedades de 'title', 'author' y 'feedlabel'
-        return (data.title.toLowerCase().indexOf(e.toLowerCase()) > -1) +
-                (data.author.toLowerCase().indexOf(e.toLowerCase()) > -1) +
-                (data.feedlabel.toLowerCase().indexOf(e.toLowerCase()) > -1);
-      });
-    });
-  },
-
-  sortData: (data,sortBy,sortOrder)
-
-
-}
-
