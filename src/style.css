@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+/*.imagen {
+  background-color: #18222cf3;
+  color: #ddd;*
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+}
+
+
+.header {
+  background-color: #0f151bde;
+  height: 115px;
+  width: 100%;
+}*/
+
+>>>>>>> 4cd4ca5... Arreglar la barra de navegacion
 body, html {
     height: 100%;
     margin: 0;
@@ -156,7 +177,6 @@ a.article, a.article:hover {
     background: #6d7fcc !important;
     color: #fff !important;
 }
-
 
 
 /* ---------------------------------------------------
