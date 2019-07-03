@@ -2,27 +2,28 @@
 window.handleData = {
   filterData: (str) => {
     //creamos un array donde cada plabra es un elemento
-    let words = str.split(" ");
+    //let words = str.split(" ");
     //programamos un bucle para evaluar cada elemento(e) del array 'words'
-    words.forEach(e => {
+    //words.forEach(e => {
       //programamos un filtro para cada valor(v) dentro de las  propiedades de 'newsitems'
       return STEAM.appnews.newsitems.filter(v => {
         //se evalua la existecia de cada elemento(e) del array 'words' en la data de las propiedades de 'title', 'author' y 'feedlabel'
-        return (v.title.toLowerCase().indexOf(e.toLowerCase()) > -1) +
-          (v.author.toLowerCase().indexOf(e.toLowerCase()) > -1) +
-          (v.feedlabel.toLowerCase().indexOf(e.toLowerCase()) > -1);
+        return (v.title.toLowerCase().indexOf(str.toLowerCase()) > -1) +
+          (v.author.toLowerCase().indexOf(str.toLowerCase()) > -1) +
+          (v.contents.toLowerCase().indexOf(str.toLowerCase()) > -1) +
+          (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1) ;
       });
-    });
-  },
+    },
+    //);
+  //},
 
-  sortData: (data, sortBy, sortOrder) => {
-    let data = STEAM.appnews.newsitems;
+  sortData: (sortBy, sortOrder) => {
     let sortedData;
     if (sortBy === 'date') {
-      sortedData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+      sortedData = STEAM.appnews.newsitems.sort((a, b) => new Date(b.date) - new Date(a.date));
     };
     if (sortBy === 'author') {
-      sortedData = data.sort((a, b) => {
+      sortedData = STEAM.appnews.newsitems.sort((a, b) => {
         if (a.author > b.author) return 1;
         if (a.author < b.author) return -1;
         return 0;
@@ -44,6 +45,7 @@ window.handleData = {
         //se evalua la existecia de cada elemento(e) del array 'words' en la data de las propiedades de 'title', 'author' y 'feedlabel'
         return (v.title.toLowerCase().indexOf(e.toLowerCase()) > -1) +
           (v.author.toLowerCase().indexOf(e.toLowerCase()) > -1) +
+          (v.contents.toLowerCase().indexOf(e.toLowerCase()) > -1) +
           (v.feedlabel.toLowerCase().indexOf(e.toLowerCase()) > -1);
       });
     });
