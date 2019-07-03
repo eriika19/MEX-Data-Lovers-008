@@ -220,6 +220,35 @@ a.article, a.article:hover {
   margin: 5px auto;
 }
 
+/* ---------------------------------------------------
+    NEWS SECTION STYLE
+----------------------------------------------------- */
+.card-header {
+  box-shadow: 0 4px 8px 0 #17202b93, 0 3px 10px 0 #17202b93;
+  background-color: #17202b93;
+}
+
+.card-text {
+padding: 0 20px;
+} 
+
+.media {
+  margin: 55px 0;
+  border-radius: 7px;
+  border: 1px solid #d2d8f32d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .news-box:hover {
+    background-color:#0d1218a6;
+    cursor: pointer;
+  }
+
+  .img-news {
+    margin: 7px 12px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(58, 58, 65, 0.2), 0 6px 20px 0 rgba(58, 58, 65, 0.2);
+  }
 
 /* ---------------------------------------------------
   MEDIAQUERIES
