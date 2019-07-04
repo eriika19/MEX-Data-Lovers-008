@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>STEAM</title>
+  <title>STEAM NEWS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -22,102 +22,107 @@
 
       <nav id="sidebar">
         <div class="sidebar-header">
-          <h3>STEAM</h3>
+          <img src="https://socialman.net/imgs/landing/steam-giveaway-app.png" class="navbar-steam"
+            style="height:48px; width: 48px;">
+          <h3>STEAM NEWS</h3>
         </div>
-
+        <!--Barra lateral-->
         <ul class="list-unstyled components">
-          <p>Canales</p>
-          <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li>
-                <a href="#">Home 1</a>
-              </li>
-              <li>
-                <a href="#">Home 2</a>
-              </li>
-              <li>
-                <a href="#">Home 3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">About</a>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ordenar por</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <a href="#">Relevancia</a>
-              </li>
-              <li>
-                <a href="#">Fecha</a>
-              </li>
-              <li>
-                <a href="#">Autor</a>
-              </li>
-            </ul>
-          </li>
+          <p id="channels">Canales</p>
+          <hr>
           <li>
             <a href="#">Updates</a>
           </li>
           <li>
+            <a href="#">Eurogame</a>
+          </li>
+          <li>
             <a href="#">TF2</a>
           </li>
+<hr>
+          <p id="sort">Ordenar por</p>
+          <hr>
+
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Autor</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Ascendete</a>
+              </li>
+              <li>
+                <a href="#">Descendente</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="date">
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Fecha</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Mas reciente</a>
+              </li>
+              <li>
+                <a href="#">Más antiguo</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </nav>
 
-      <!-- Page Content Holder -->
+      <!-- Contenido -->
 
-        <div id="content">
+      <div id="content">
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <div class="col-md-12">
-                <div class="row">
-                  <div class="col-md-4">
-                      <button type="button" id="sidebarCollapse" class="navbar-btn">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                      </button>
-                      <img src="https://socialman.net/imgs/landing/steam-giveaway-app.png" style="height: 64px; width: 64px;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div id="home">
+                  <img src="https://socialman.net/imgs/landing/steam-giveaway-app.png" class="navbar-steam"
+                    style="height:60px; width: 60px;">
+                  <h1 id="home">STEAM</h1>
+                </div>
+                </div>
+                <div class="col-md-4 align-middle">
+                  <div class="row">
+                    <input id="search" class="container-fluid">
                   </div>
-                  <div class="col-md-4 align-middle">
-                    <div class="row">
-                        <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" 
-                      type="button"                
-                      data-toggle="collapse"
-                      data-target="#navbarSupportedContent" 
-                      aria-controls="navbarSupportedContent" 
-                      aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <i class="fas fa-align-justify"></i>
-                    </button>
-      
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Tienda</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Comunidad</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Soporte</a>
-                        </li>
-                      </ul>
-                    </div>
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#"></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://store.steampowered.com/" target="_blank">Tienda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://steamcommunity.com/" target="_blank">Comunidad</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://help.steampowered.com/es/" target="_blank">Soporte</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </nav>
+          </div>
+        </nav>
         <!--seccion de video de introduccion-->
         <div id="video-section">
           <figure class="event-imageContainer">
@@ -125,12 +130,12 @@
             </iframe>
           </figure>
         </div>
-<!--seccion de noticias-->
+        <!--seccion de noticias-->
         <div id="news-section">
 
         </div>
-      
-        </div>
+
+      </div>
     </div>
   </div>
 
@@ -138,7 +143,7 @@
   <script src="main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+
   <script>
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
@@ -152,4 +157,3 @@
 </body>
 
 </html>
-
