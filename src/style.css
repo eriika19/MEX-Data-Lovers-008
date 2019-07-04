@@ -275,6 +275,10 @@ a.article:hover {
   color: #17202b98;
 }
 
+#glass {
+  opacity: .4;
+}
+
 .nav-link {
   font-size: 1.3em;
 }
