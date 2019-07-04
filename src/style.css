@@ -277,6 +277,7 @@ a.article:hover {
 
 #glass {
   opacity: .4;
+  float: right;
 }
 
 .nav-link {
@@ -285,6 +286,17 @@ a.article:hover {
 
 .nav-link:hover {
   font-size: 1.6em;
+}
+
+
+/* ---------------------------------------------------
+    VIDEO SECTION
+----------------------------------------------------- */
+#video-section {
+  text-align: center;
+  background-color: #0f151b59;
+  padding: 12px;
+  margin-top: -30px;
 }
 
 /* ---------------------------------------------------
