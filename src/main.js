@@ -4,6 +4,13 @@ const videoSection = document.getElementById('video-section');
 const newsSection = document.getElementById('news-section');
 const search = document.getElementById('search');
 
+
+//barra lateral
+
+const update = document.getElementById('update');
+const euro = document.getElementById('euro');
+const tf2 = document.getElementById('tf2');
+
 //funcion para ir a inicio
 const goHome = () => {
   search.value = "";
@@ -62,6 +69,8 @@ const displayNews = (data) => {
 // despliega noticias de inicio
 displayNews(arrNews);
 
+
+
 //chismosa para ir a inicio
 home.addEventListener ('click', () => goHome());
 
@@ -71,6 +80,37 @@ search.addEventListener('keyup', () => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
   const arr = window.handleData.filterData(search.value);
+  displayFound(arr);
+  displayNews(arr);
+});
+
+
+//chismosas para navegacion en barra lateral
+update.addEventListener('click', () => {
+  newsSection.innerHTML = "";
+  search.value = "Updates";
+  videoSection.classList.add("hide");
+  const arr = window.handleData.filterData('update');
+  displayFound(arr);
+  displayNews(arr);
+});
+
+
+euro.addEventListener('click', () => {
+  newsSection.innerHTML = "";
+  search.value = "Eurogame";
+  videoSection.classList.add("hide");
+  const arr = window.handleData.filterData('euro');
+  displayFound(arr);
+  displayNews(arr);
+});
+
+
+tf2.addEventListener('click', () => {
+  newsSection.innerHTML = "";
+  search.value = "TF2";
+  videoSection.classList.add("hide");
+  const arr = window.handleData.filterData('tf2');
   displayFound(arr);
   displayNews(arr);
 });
