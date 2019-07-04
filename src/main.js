@@ -1,36 +1,82 @@
 const arrNews = STEAM.appnews.newsitems;
+const home = document.getElementById('home');
+const videoSection = document.getElementById('video-section');
 const newsSection = document.getElementById('news-section');
 const search = document.getElementById('search');
 
+//funcion para ir a inicio
+const goHome = () => {
+  search.value = "";
+  videoSection.classList.remove("hide");
+  newsSection.innerHTML = "";
+  displayNews(arrNews);
+}
+
+
+//funcion para pintar numero de noticias encontradas y opciones de ordenado
+const displayFound = (data) => {
+  newsSection.innerHTML =
+  `<div class="box">
+  <p id="value-search" class="card-text">Busqueda: '${search.value}'</p>
+  <div id="items-found">
+  <p class="card-text"><small class="text-muted">${data.length} resultados</small></p>
+  </div>
+
+  <div id="sort-by">
+  <div class="dropdown">
+ <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Ordenar por:
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Fecha</a>
+    <a class="dropdown-item" href="#">Autor</a>
+  </div>
+</div>
+</div>
+
+<p class="no-show">.</p></div>`;
+}
+
+
+//funcion para pintar noticias
 const displayNews = (data) => {
-data.forEach(e => { newsSection.insertAdjacentHTML("beforeEnd",
-`<div class="media news-box">
+  data.forEach(e => {
+    newsSection.insertAdjacentHTML("beforeEnd",
+  ` <div class="media news-box">
+      <a href="${e.url}">
   <div class="media-body">
   <div class="card-header text-white">
   <h5 class="card-title" text>${e.title}</h5>
 </div>
+<div class="news">
     <p class="card-text">${e.contents}</p>
     <p class="card-text"><small class="text-muted">${new Date(e.date)}</small></p>
-  </div>
-  <img class="img-news align-self-center ml-3" width="30%" src="${e.img}" alt="news-img">
+</div>
+  <div class="img-box"><img class="img-news align-self-center ml-3" width="100%" src="${e.img}" alt="news-img"></div>
+  </div></a>
 </div>`
-)
-});
+    )
+  });
 }
 
+// despliega noticias de inicio
 displayNews(arrNews);
 
-const cleanNews = () => newsSection.clear() ;
+//chismosa para ir a inicio
+home.addEventListener ('click', () => goHome());
 
 
-//chismosa para input
+//chismosa para inpurt 'search' que llama funcion de busqueda y pintar resultados
 search.addEventListener('keyup', () => {
   newsSection.innerHTML = "";
+  videoSection.classList.add("hide");
   const arr = window.handleData.filterData(search.value);
+  displayFound(arr);
   displayNews(arr);
-} );
+});
 
 
+//estilos de noticias
 
 /*
 
