@@ -275,12 +275,28 @@ a.article:hover {
   color: #17202b98;
 }
 
+#glass {
+  opacity: .4;
+  float: left;
+}
+
 .nav-link {
   font-size: 1.3em;
 }
 
 .nav-link:hover {
-  font-size: 1.6em;
+  font-size: 1.4em;
+}
+
+
+/* ---------------------------------------------------
+    VIDEO SECTION
+----------------------------------------------------- */
+#video-section {
+  text-align: center;
+  background-color: #0f151b3b;
+  padding: 12px;
+  margin-top: -30px;
 }
 
 /* ---------------------------------------------------

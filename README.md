@@ -12,6 +12,9 @@
 - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
 
 ---
+## Proto Persona
+![Persona](img-readme/persona.png)
+
 
 ## Introducción
 
