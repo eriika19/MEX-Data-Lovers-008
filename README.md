@@ -2,21 +2,17 @@
 
 ## Índice
 
-- [User Persona](#User-Persona)
 - [Introducción](#introducción)
 - [Descripción general del proyecto](#descripción-general-del-proyecto)
 - [Avance](#avance)
 - [Información recabada](#información-recabada)
 - [User Persona](#user-persona)
+- [Definción de producto](#definición-de-producto)
 - [Pains y Gains](#pains-y-gains)
 - [Historias de Usuario](#historias-de-usuario)
 - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
 
 ---
-## User Persona
-![Persona](img-readme/persona.png)
-
-
 ## Introducción
 
 Steam es una de las mejores plataformas a las que acudir para jugar a videojuegos desde un ordenador. Nació en septiembre de 2003 de la mano de Valve, como plataforma de distribución digital, y en ella encontramos títulos tanto de pequeños desarrolladores independientes como de grandes estudios.
@@ -86,7 +82,11 @@ Sólo el 66.7% de los usuarios conocen STEAM.
 
 ## User Persona
 
-Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnología. Trabaja entresemana, por lo cual, espera al fin de semana para desestresarse jugando su videojuego favorito. Usualmente juega solx en casa ya que no tienen tanta facilidad de acordar horarios con otros jugadores. Necesitan algo que los mantenga actualizados que cumpla las siguientes características:
+![Persona](img-readme/persona.png)
+
+## Definición de producto
+
+Mateo necesita algo que los mantenga actualizados que cumpla las siguientes características:
 
 - Rápido
 - Intituitivo
@@ -111,15 +111,14 @@ Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnolog�
 ## Historias de usuario
 
 
-Yo usuario busco manterme actualizado con la noticias publicadas por mi autor o blogger favorito:
- Entro a la pagina web de noticias de STEAM
-Localizo la barra de busqueda e ingreso el nombre de mi autor, blogger favorito,el sitio muestra un listado de todas las noticias de mi autor,o blogger favorito.
+Yo usuario busco manterme actualizado con la noticias publicadas por mi autor o blogger favoritx:
+ Entro a la pagina web de noticias de STEAM, localizo la barra de busqueda e ingreso el nombre de mi autor, blogger favorito. El sitio muestra un listado de todas las noticias de mi autor o blogger favoritx.
 
-Criterio de Aceptacón:
+*Criterio de Aceptacón:*
 
 La pagína web debe tener una barra de busqueda donde pueda localizar rapidamente,a mi autor favorito,o blogger y que contenga menos anuncios.
 
-Definición de Terminado:
+*Definición de Terminado:*
 
 Los nombres de los autores y las fechas de los juegos apareceran en la barra de desplpara que sea más facil localizar a cada uno de ellos.
 
