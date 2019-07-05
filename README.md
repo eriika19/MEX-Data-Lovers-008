@@ -2,6 +2,7 @@
 
 ## Índice
 
+- [User Persona](#User-Persona)
 - [Introducción](#introducción)
 - [Descripción general del proyecto](#descripción-general-del-proyecto)
 - [Avance](#avance)
@@ -12,6 +13,9 @@
 - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
 
 ---
+## User Persona
+![Persona](img-readme/persona.png)
+
 
 ## Introducción
 
@@ -106,13 +110,21 @@ Hombre/mujer de entre 23 y 36 años que pertenece a la industria de la tecnolog�
 
 ## Historias de usuario
 
-Yo usuario busco mantenerme actualizadx con la noticias publicadas por mi autor o bloggerx favoritx:
 
-- Entro a la _página web_ de noticias STEAM
-- Localizo la barra de búsqueda e ingreso el nombre de mi autor / bloggerx favoritx
-- El sitio muestra un listado de todas las noticias de mi autor / bloggerx favoritx
+Yo usuario busco manterme actualizado con la noticias publicadas por mi autor o blogger favorito:
+ Entro a la pagina web de noticias de STEAM
+Localizo la barra de busqueda e ingreso el nombre de mi autor, blogger favorito,el sitio muestra un listado de todas las noticias de mi autor,o blogger favorito.
 
----
+Criterio de Aceptacón:
+
+La pagína web debe tener una barra de busqueda donde pueda localizar rapidamente,a mi autor favorito,o blogger y que contenga menos anuncios.
+
+Definición de Terminado:
+
+Los nombres de los autores y las fechas de los juegos apareceran en la barra de desplpara que sea más facil localizar a cada uno de ellos.
+
+
+
 
 ## Prototipo de baja fidelidad
 
