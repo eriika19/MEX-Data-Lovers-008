@@ -110,7 +110,6 @@ Hombre/mujer de entre 23 y 36 a√±os que pertenece a la industria de la tecnolog√
 
 ## Historias de usuario
 
-Historias de Usuario.
 
 Yo usuario busco manterme actualizado con la noticias publicadas por mi autor o blogger favorito:
  Entro a la pagina web de noticias de STEAM
