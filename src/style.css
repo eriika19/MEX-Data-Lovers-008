@@ -430,6 +430,23 @@ margin-top: 8vh;
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */
+
+@media (max-width: 1234px) {
+.col-md-11 {
+  max-width: 88%;
+  min-width: 88%;
+}
+}
+
+@media (max-width: 981px) {
+  .col-md-6 {
+    max-width: 56.5%;
+    min-width: 56.5%;
+  }
+  }
+
+
+
 @media (max-width: 768px) {
   
   #sort-by-btn, p {
@@ -515,8 +532,6 @@ margin-top: 8vh;
     font-weight: 500;
   }
 
-
-
   h5 {
     font-size: 1.1em;
   }
@@ -599,6 +614,18 @@ h3 {
 
 }
 
+
+@media (max-width: 712px) {
+  .col-sm-5 {
+    max-width: 56%;
+    min-width: 56%;
+  }
+
+  .col-sm-9 {
+    max-width: 72%;
+    min-width: 72%;
+  }
+  }
 
 @media (max-width: 425px) {
 
