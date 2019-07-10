@@ -105,7 +105,7 @@ var STEAM = {
         "url": "https://steamstore-a.akamaihd.net/news/externalpost/rps/2403126706534048982",
         "img": "https://spuf.org/wp-content/uploads/2018/10/screamfortress2018.jpg",
         "is_external_url": true,
-        "author": "contact@rockpapershotgun.com (Matt Cox)",
+        "author": "Matt Cox",
         "contents": "The thing about special Halloween game modes is that they&#8217;re fun for a round or two, then the novelty wears off. The thing about <a href=\"https://www.rockpapershotgun.com/game/team-fortress-2/\">Team Fortress 2</a>&#8216;s Halloween mode is that there are 18 of them. Ok, so only 5 of those are new &#8211; but you can also play the 13 previous Halloween events, w...",
         "feedlabel": "Rock, Paper, Shotgun",
         "date": 1540295862,

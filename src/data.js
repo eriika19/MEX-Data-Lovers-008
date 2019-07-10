@@ -8,10 +8,10 @@ window.handleData = {
     //programamos un filtro para cada valor(v) dentro de las  propiedades de 'newsitems'
     return STEAM.appnews.newsitems.filter(v => {
       //se evalua la existecia de cada elemento(e) del array 'words' en la data de las propiedades de 'title', 'author' y 'feedlabel'
-      return (v.title.toLowerCase().indexOf(str.toLowerCase()) > -1) +
-        (v.author.toLowerCase().indexOf(str.toLowerCase()) > -1) +
-        (v.contents.toLowerCase().indexOf(str.toLowerCase()) > -1) +
-        (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1);
+      return ((v.title.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
+        (v.author.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
+        (v.contents.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
+        (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1));
     });
   },
   // );

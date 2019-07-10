@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <title>STEAM NEWS</title>
+  <link rel="icon" type="image/img" href="https://socialman.net/imgs/landing/steam-giveaway-app.png">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -28,7 +29,7 @@
         </div>
         <!--Barra lateral-->
         <ul class="list-unstyled components">
-          <p id="channels">Canales</p>
+          <p id="channels">Channels</p>
           <hr>
           <li>
             <a id="update">Updates</a>
@@ -40,29 +41,29 @@
             <a id="tf2">TF2</a>
           </li>
           <hr>
-          <p id="sort">Ordenar por</p>
+          <p id="sort">Sort by</p>
           <hr>
 
           <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Autor</a>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Author</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
               <li>
-                <a href="#">Ascendete</a>
+                <a id="nav-a-z">A - Z</a>
               </li>
               <li>
-                <a href="#">Descendente</a>
+                <a id="nav-z-a">Z - A</a>
               </li>
             </ul>
           </li>
 
           <li class="date">
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Fecha</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Date</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
               <li>
-                <a href="#">Mas reciente</a>
+                <a id="nav-most-recent">Most recent</a>
               </li>
               <li>
-                <a href="#">Más antiguo</a>
+                <a id="nav-least-recent">Least recent</a>
               </li>
             </ul>
           </li>
@@ -77,9 +78,9 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <div class="col-md-12">
+            <div class="col-md-13">
               <div class="row">
-                <div class="col-md-4">
+                <div id ="left-side-nav" class="col-md-3">
                   <button type="button" id="sidebarCollapse" class="navbar-btn">
                     <span></span>
                     <span></span>
@@ -91,32 +92,29 @@ style="height:60px; width: 60px;">
                         <h1 id="home">STEAM</h1>
                       </div>
                     </div>
-                    <div class="col-md-4 align-middle">
+                    <div id="search-box" class="col-md-5 col-sm-5 align-middle">
                       <div class="row">
-                        <input id="search" class="container-fluid">                       
+                        <input id="search" class="container-fluid">
+                        <img id= "glass" src="search.png" style="width: 42px; height: 42px;" />                       
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div id="right-side-nav" class="col-md-12 col-sm-1 align-right">
                       <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                       </button>
-                      <img id= "glass" src="search.png" style="width: 42px; height: 42px;" />
-    
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                      <div class="col-md-12 navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                          <li class="nav-item active">
-                            <a class="nav-link" href="#"></a>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://store.steampowered.com/" target="_blank">Store</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="https://store.steampowered.com/" target="_blank">Tienda</a>
+                            <a class="nav-link" href="https://steamcommunity.com/" target="_blank">Community</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="https://steamcommunity.com/" target="_blank">Comunidad</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://help.steampowered.com/es/" target="_blank">Soporte</a>
+                            <a class="nav-link" href="https://help.steampowered.com/en/" target="_blank">Support</a>
                           </li>
                         </ul>
                       </div>
@@ -150,13 +148,13 @@ style="height:60px; width: 60px;">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <script>
+    //barra de navegacion lateral
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
-        $(this).toggleClass('active');
+        $('#sidebarCollapse').toggleClass('active');
       });
     });
-
   </script>
 
 </body>

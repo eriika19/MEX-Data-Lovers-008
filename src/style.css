@@ -265,19 +265,20 @@ a.article:hover {
 
 #search {
   height: 70px;
-  width: 100%;
+  width: 80%;
   border: 6px solid #f5f5f5;
   background-color: #f5f5f5;
   font-family: 'Poppins', sans-serif;
   font-size: 3.2em;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   color: #17202b98;
+  float: left;
 }
 
 #glass {
   opacity: .4;
-  float: left;
+  float: right;
 }
 
 .nav-link {
@@ -288,6 +289,22 @@ a.article:hover {
   font-size: 1.4em;
 }
 
+.col-md-4 {
+  max-width: 37.333333%;
+}
+
+#left-side-nav {
+  min-width: 300px;
+  max-width: 25.333333%;
+}
+
+#right-side-nav {
+  max-width: 350px;
+}
+
+#box-search {
+  min-width: 90%;
+}
 
 /* ---------------------------------------------------
     VIDEO SECTION
@@ -359,6 +376,47 @@ a.article:hover {
   float: left;
   width: 70%;
 }
+
+
+/* ---------------------------------------------------
+  MENU DEPEGABLE PARA ORDENAR
+  ----------------------------------------------------- */
+
+
+ /* Dropdown Button */
+
+
+/* Dropdown button on hover & focus */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
 
 /* ---------------------------------------------------
   MEDIAQUERIES
