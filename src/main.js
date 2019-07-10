@@ -72,11 +72,11 @@ const displayNews = (data) => {
   <h5 class="card-title" text>${e.title}</h5>
 </div>
 <div class="news">
-<p class="card-text"><small><strong>Author: ${e.author}<strong></small></p>
+<p class="card-text"><small><strong>${e.author}<strong></small></p>
     <p class="card-text">${e.contents}</p>
     <p class="card-text"><small class="text-muted">${date}</small></p>
 </div>
-  <div class="img-box"><img class="img-news align-self-center ml-3" width="100%" src="${e.img}" alt="news-img"></div>
+  <div class="img-box"><img class="img-news align-self-center ml-3" width="100%" src="${e.img}" alt="${e.title}-img"></div>
   </div></a>
 </div>`
     )
@@ -135,7 +135,7 @@ tf2.addEventListener('click', () => {
 
 navAtoZ.addEventListener('click', sortBy('navAtoZ'))
 
-
+/*
 const sortBy = (sortBy) => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
@@ -143,7 +143,7 @@ const sortBy = (sortBy) => {
   const arr = window.handleData.filterData('update');
   displayFound(arr);
   displayNews(arr);
-});
+});*/
 
 
 /* When the user clicks on the button,
