@@ -36,11 +36,11 @@ const displayFound = (data) => {
   `<div class="box">
   <p id="value-search" class="card-text">Search: '${search.value}'</p>
   <div id="items-found">
-  <p class="card-text"><small class="text-muted">${data.length} resultados</small></p>
+  <p class="card-text"><small class="text-muted">${data.length} results</small></p>
   </div>
 
   <div id="sort-by" class="dropdown">
-  <button id="sort-by-btn" type="button" class="btn btn-secondary">Ordenar por:</button>
+  <button id="sort-by-btn" type="button" class="btn btn-secondary">Sort by:</button>
   <div id="dropdown" class="dropdown-content">
     <a href="#">Most recent</a>
     <a href="#">Least recent</a>
