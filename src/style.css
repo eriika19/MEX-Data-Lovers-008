@@ -271,7 +271,7 @@ height: 44px;
   background-color: rgba(230, 230, 230, 0.945);
   color: #0f151bde;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.3em;
+  font-size: 1.81em;
   font-weight: 600;
   text-align: center;
   float: left;
@@ -299,6 +299,7 @@ height: 44px;
 #left-side-nav {
   min-width: 232px;
   max-width: 232px;
+  vertical-align: middle;
 }
 
 .col-md-6 {
@@ -307,6 +308,9 @@ height: 44px;
   padding: 0 13px;
 }
 
+.navbar-nav {
+  flex-direction: column-reverse;
+}
 
 /* ---------------------------------------------------
     VIDEO SECTION
@@ -463,11 +467,11 @@ height: 44px;
 
   @media (max-width: 1295px) {
     .nav-link {
-      font-size: 1em;
+      font-size: 1.1em;
      }
     
     .nav-link:hover {
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
 
     .card-header {
@@ -478,6 +482,16 @@ height: 44px;
       font-size: .87em;
       font-weight: 350;
     }
+    }
+
+    @media (max-width: 1254px) {
+      .nav-link {
+        font-size: 1em;
+       }
+      
+      .nav-link:hover {
+        font-size: 1.1em;
+      }
     }
 
     @media (max-width: 1220px) {
@@ -538,6 +552,7 @@ height: 44px;
             min-width: 180px;
             max-width: 180px;
             }
+
           #sidebar.active {
             margin-left: -180px;
           }
@@ -556,6 +571,14 @@ height: 44px;
             height:38px; 
             width: 38px;
           }
+
+          #search {
+            font-size: 2em
+          }
+
+          .img-box {
+            margin-top: 12px;
+          }
           }
 
 @media (max-width: 986px) {
@@ -570,9 +593,15 @@ height: 44px;
       max-width: 53%;
       min-width: 53%;
     }
+    .img-box {
+      margin-top: 20px;
+    }
     }
 
 @media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row-reverse;
+}
 
   #home {
     min-width: 195px;
@@ -580,8 +609,8 @@ height: 44px;
   }
 
   #left-side-nav{
-    min-width: 195px;
-    max-width: 195px;
+    min-width: 173px;
+    max-width: 173px;
   }
   
   #sort-by-btn, p {
@@ -590,6 +619,16 @@ height: 44px;
     font-weight: 400;
     line-height: 1.5em;
   }
+
+  #sort-by-btn {
+    padding: 4.5px 10px;
+  }
+
+  .card-header {
+    font-size: .93em;
+    height: 47px;
+    padding: 10px 15px;
+}
 
   #sidebar-logo {
     height:47px; 
@@ -651,9 +690,10 @@ height: 44px;
   }
 
   #search {
-    font-size: 1.45em;
+    font-size: 1.6em;
     font-weight: 600;
-  }
+    height: 34px;
+}
 
   h5 {
     font-size: 1.1em;
@@ -663,24 +703,95 @@ height: 44px;
     max-width: 50%;
     min-width: 50%;
   }
+
+  .img-box {
+    margin-top: 40px;
+  }
 }
 
 
-@media (max-width: 712px) {
+@media (max-width: 721px) {
   .col-sm-5 {
-    max-width: 49%;
-    min-width: 49%;
+    max-width: 48%;
+    min-width: 48%;
   }
 
   .col-sm-9 {
     max-width: 80%;
     min-width: 80%;
   }
-/*
-  .col-sm-1{
-    max-width: 20%;
-    min-width: 20%;
-  }*/
+
+  #search {
+    font-size: 1.49em;
+    font-weight: 600;
+    height: 30px;
+}
+
+#left-side-nav {
+  min-width: 148px;
+  max-width: 148px;
+}
+
+#nav-logo {
+  height:32.6px; 
+  width: 134px;
+}
+
+#sidebarCollapse {
+  width: 34px;
+  height: 34px;
+  margin-right: 4px;
+}
+
+#glass {
+  height:31px; 
+  width: 31px;
+}
+
+  .col-md-auto{
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  #sidebar {
+    margin-left: -170px;
+    min-width: 170px;
+    max-width: 170px;
+  }
+}
+
+@media (max-width:676px) {
+  #sidebar {
+    margin-left: -161px;
+    min-width: 161px;
+    max-width: 161px;
+  }
+
+  h3{
+    font-size: 1.2em;
+  }
+
+  .card-header {
+    font-size: .9em;
+  }
+  
+  .card-text {
+    font-size: .82em;
+    color: rgb(202, 202, 202);
+    font-weight: 300;
+  }
+
+  #sort-by {
+    font-size: .845em;
+  }
+  
+  #sort-by-btn {
+    padding: 4px 8px;
+  }
+
+  header {
+    height: 65px;
+  }
 }
 
   @media (max-width: 415px) {

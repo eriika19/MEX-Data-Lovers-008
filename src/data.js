@@ -17,21 +17,34 @@ window.handleData = {
   // );
   //},
 
-  sortData: (sortBy, sortOrder) => {
+  sortData: (data, sortBy) => {
     let sortedData;
-    if (sortBy === 'date') {
-      sortedData = STEAM.appnews.newsitems.sort((a, b) => new Date(b.date) - new Date(a.date));
-    };
-    if (sortBy === 'author') {
-      sortedData = STEAM.appnews.newsitems.sort((a, b) => {
-        if (a.author > b.author) return 1;
-        if (a.author < b.author) return -1;
-        return 0;
-      });
-    };
-    if (sortOrder === 'downward') sortedData.reverse();
-    return sortedData;
-  },
+    switch (sortBy) {
+    case 'most-recent':
+        sortedData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        break;
+        case 'least-recent':
+            sortedData = (data.sort((a, b) => new Date(b.date) - new Date(a.date))).reverse();
+            break;
+            case 'a-z':
+                sortedData = data.sort((a, b) => {
+                  if (a.title > b.title) return 1;
+                  if (a.title < b.title) return -1;
+                  return 0;
+                });
+                break;
+                case 'z-a':
+                    sortedData = (data.sort((a, b) => {
+                      if (a.title > b.title) return 1;
+                      if (a.title < b.title) return -1;
+                      return 0;
+                    })).reverse();
+                    break;
+                    default:
+                      alert('Hubo una falla. Por favor, intenta de nuevo.')
+                };
+                return sortedData;
+              },
 
   computeStats: (str) => {
     //creamos un array donde cada plabra es un elemento
