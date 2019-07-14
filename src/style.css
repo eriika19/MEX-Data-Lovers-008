@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-
 }*/
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600";
@@ -326,6 +325,12 @@ a.article:hover {
 
 #video {
   height: 270px;
+}
+
+.margen-video {
+  position: relative;
+  z-index: -100;
+  margin-top: 50px !important;
 }
 
 /* ---------------------------------------------------
@@ -1109,4 +1114,4 @@ h5 {
 .navbar-nav {
   flex-direction: column-reverse;
 }
-}
+ 
