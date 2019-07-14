@@ -1,5 +1,3 @@
-const dropdown = localStorage.getItem("dropdown");
-const sortByBtn = localStorage.getItem("sortByBtn");
 
 //secciones y búsqueda
 const arrNews = STEAM.appnews.newsitems;
@@ -8,53 +6,88 @@ const videoSection = document.getElementById('video-section');
 const newsSection = document.getElementById('news-section');
 const search = document.getElementById('search');
 
+//let dropdown;
+let arr = arrNews;
+let percent;
 
-//barra lateral de nav
+//traer items por nombre de clase
+const btnChannel = document.getElementsByClassName('channel');
+const sortByOption = document.getElementsByClassName('sortby-option');
+let sortByItem = [];
 
-const update = document.getElementById('update');
-const euro = document.getElementById('euro');
-const tf2 = document.getElementById('tf2');
 
-const navAtoZ = document.getElementById('nav-a-z');
-const navZtoA = document.getElementById('nav-z-a');
-const navMostRecent = document.getElementById('nav-most-recent');
-const navLeastRecent = document.getElementById('nav-least-recent');
-
-//funcion para ir a inicio
-const goHome = () => {
-  search.value = "";
-  videoSection.classList.remove("hide");
+//funcion para filtrar que llama a la funcion de itemes encontrados y desplegar noticias
+const filter = (str) => {
   newsSection.innerHTML = "";
-  displayNews(arrNews);
+  videoSection.classList.add("hide");
+  arr = window.handleData.filterData(str);
+  percent = window.handleData.computeStats(arr);
+  displayFound(arr, percent);
+  displayNews(arr);
+};
+
+//funcion para ordenar
+const sort = (arr, sortBy) => {
+  newsSection.innerHTML = "";
+  videoSection.classList.add("hide");
+  const sortedData = window.handleData.sortData(arr, sortBy);
+  displayFound(sortedData);
+  displayNews(sortedData);
+};
+
+
+//funcion para botones en barra lateral. Se extrae id del boton seleccionado
+for (let i = 0; i < btnChannel.length; i++) {
+  btnChannel[i].addEventListener('click', () => {
+    const Channel = event.target.id;
+    search.value = Channel;
+    filter(Channel);
+  });
+}
+
+//funcion para opciones de menu despegable.Se extrae el valor de title de la opcion seleccionada
+for (let i = 0; i < sortByOption.length; i++) {
+  sortByOption[i].addEventListener('click', () => {
+    const sortBy = event.target.title;
+    sort(arr, sortBy);
+  });
 }
 
 //funcion para pintar numero de noticias encontradas y opciones de ordenado
 const displayFound = (data) => {
   newsSection.innerHTML =
-  `<div class="box">
-    <p id="value-search" class="card-text">Search: '${search.value}'</p>
-    <div id="items-found">
-      <p class="card-text"><small class="text-muted">${data.length} resultados</small></p>
-    </div>
-
-    <div id="sort-by" class="dropdown">
-      <button id="sort-by-btn" type="button" class="btn btn-secondary">Ordenar por:</button>
-      <div id="dropdown" class="dropdown-content">
-        <a href="#">Most recent</a>
-        <a href="#">Least recent</a>
-        <a href="#">Title A - Z</a>
-        <a href="#">Title Z - A</a>
-      </div>
-    </div> 
+    `<div class="box">
+  <div class="row">
+  <div class="col-md-12">
+  <p id="value-search" class="card-text">Search: '${search.value}'</p>
+  
+  <div id="items-found">
+  <p class="card-text"><small class="text-muted">${data.length} results</small></p>
   </div>
-  <p class="no-show">.</p>`;
+  </div> </div>
+  <div class="row">
+  <div class="col-md-12">
+  <div id="sort-by" class="dropdown">
+  <button id="sort-by-btn" class="btn btn-secondary">Sort by :</button>
+  <div id="dropdown" class="dropdown-content">
+    <a class="sort-by-item" title="most-recent" >Most recent</a>
+    <a class="sort-by-item" title="least-recent" >Least recent</a>
+    <a class="sort-by-item" title="a-z" >Title A - Z</a>
+    <a class="sort-by-item" title="z-a" >Title Z - A</a>
+  </div>
+</div>
+<div id="percent">
+<p class="card-text"><small>${percent}% of Steam News</small></p>
+</div>
+</div> </div>
+  </div>`;
+  //dropdown = document.getElementById('dropdown');
+  sortByItem = document.getElementsByClassName('sort-by-item');
 
-  let sortByBtn = document.getElementById('sort-by-btn');
-  let dropdown = document.getElementById('dropdown');
-  localStorage.setItem("sortByBtn",sortByBtn);
-  localStorage.setItem("dropdown",dropdown);
-}
-
+  document.getElementById("sort-by-btn").addEventListener('click', () => {
+    funcDrop();
+  });
+};
 
 //funcion para pintar noticias
 const displayNews = (data) => {
@@ -62,99 +95,54 @@ const displayNews = (data) => {
     let d = new Date(e.date);
     let date = d.toDateString();
     newsSection.insertAdjacentHTML("beforeEnd",
-  ` <div class="media news-box">
+      ` <div class="media news-box">
       <a href="${e.url}" target="_blank">
   <div class="media-body">
   <div class="card-header text-white">
   <h5 class="card-title" text>${e.title}</h5>
 </div>
 <div class="news">
-<p class="card-text"><small><strong>Author: ${e.author}<strong></small></p>
+<p class="card-text"><small><strong>${e.author}<strong></small></p>
     <p class="card-text">${e.contents}</p>
     <p class="card-text"><small class="text-muted">${date}</small></p>
 </div>
-  <div class="img-box"><img class="img-news align-self-center ml-3" width="100%" src="${e.img}" alt="news-img"></div>
+  <div class="img-box"><img class="img-news align-self-center ml-3" width="100%" src="${e.img}" alt="${e.title}-img"></div>
   </div></a>
 </div>`
-    )
+    );
   });
-}
+};
 
 // despliega noticias de inicio
 displayNews(arrNews);
 
+//funcion para ir a inicio
+const goHome = () => {
+  search.value = "";
+  videoSection.classList.remove("hide");
+  newsSection.innerHTML = "";
+  displayNews(arrNews);
+};
+
 //chismosa para ir a inicio
-home.addEventListener ('click', () => goHome());
+home.addEventListener('click', () => goHome());
 
-//chismosa para inpurt 'search' que llama funcion de busqueda y pintar resultados
+
+//chismosa para inpurt 'search' que llama funcion de filtrar
 search.addEventListener('keyup', () => {
-  newsSection.innerHTML = "";
-  videoSection.classList.add("hide");
-  const arr = window.handleData.filterData(search.value);
-  displayFound(arr);
-  displayNews(arr);
-});
-
-//chismosas para navegacion en barra lateral
-update.addEventListener('click', () => {
-  newsSection.innerHTML = "";
-  search.value = "Updates";
-  videoSection.classList.add("hide");
-  const arr = window.handleData.filterData('update');
-  displayFound(arr);
-  displayNews(arr);
+  filter(search.value);
 });
 
 
-euro.addEventListener('click', () => {
-  newsSection.innerHTML = "";
-  search.value = "Eurogame";
-  videoSection.classList.add("hide");
-  const arr = window.handleData.filterData('euro');
-  displayFound(arr);
-  displayNews(arr);
-});
+//Funcion para ocultar/mostrar menu despegable sortBy y realizar ordenado
+const funcDrop = () => {
+  document.getElementById("dropdown").classList.toggle("show");
 
-
-tf2.addEventListener('click', () => {
-  newsSection.innerHTML = "";
-  search.value = "TF2";
-  videoSection.classList.add("hide");
-  const arr = window.handleData.filterData('tf2');
-  displayFound(arr);
-  displayNews(arr);
-});
-
-/*
-navAtoZ.addEventListener('click', sortBy('navAtoZ'))
-
-
-const sortBy = (sortBy) => {
-  newsSection.innerHTML = "";
-  videoSection.classList.add("hide");
-  if ()
-  const arr = window.handleData.filterData('update');
-  displayFound(arr);
-  displayNews(arr);
-});
-/*
-
- When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-sortByBtn.addEventListener('click', () => {
-  dropdown.toggle(true);
-})
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName("dropdown-content");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      const openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  };
-}
+  //funcion para items de menu despegable. Se extrae el valor de title de la opcion seleccionada
+  for (let i = 0; i < sortByItem.length; i++) {
+    sortByItem[i].addEventListener('click', () => {
+      const sortBy = event.target.title;
+      sort(arr, sortBy);
+    });
+  }
+};

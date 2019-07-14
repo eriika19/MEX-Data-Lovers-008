@@ -30,6 +30,13 @@ Actualmente, hay más de 3.000 juegos disponibles en Steam y 75 millones de cuen
 Este proyecto se trabajó por la dupla conformada por María Itzel Erika Enciso Ibáñez y Monserratt Cuevas Serrano; se busca *construir una _página web_ para visualizar el conjunto de datos de noticias de la página de STEAM*.
 
 
+## Lo que se logro
+
+Logramos hacer el fltrado para que al usuario se le haga más facil, encontrar el autor, del juego que busca
+o por fecha que se le haga más, rapido ir a la sección de notcias y que lo pueda visualizar desde su ,
+telefono movil.
+
+
 ## Avance
 
 Se realizaron 12 encuestas que nos ayudaron a recabar información sobre: las necesidades, rango de edad, sexo, preferencias,  _pains, gains_ y comportamientos de los usuarios, y así, poder contruir una interfaz que se adecúe a las necesidades del usuario.
@@ -44,6 +51,9 @@ Especificamente se buscará que la página web sea capaz de:
 - [ ] Filtrar la data por título de la notica
 - [ ] Filtrar la data por autor de la noticia
 - [ ] Organizar la data por etiquetas (_canales_)
+
+Logramos que la data este fltrada por el titulo de la noticia, y que filtre por canales y que este, ordenada
+y que el usuario pueda visualisar la pagina desde un telefono movil.
 
 
 ### Información recabada
@@ -130,3 +140,8 @@ Los nombres de los autores y las fechas de los juegos apareceran en la barra de 
 A continuación se muestra el prototipo de baja fidelidad que se creo para hacer el primer testeo de la interfaz.
 
 ![prototipo](img-readme/prototipo.jpeg)
+
+## Prototipo de alta fidelidad 
+
+![perro](img-readme/perro.jpeg)
+
