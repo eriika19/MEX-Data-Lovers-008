@@ -20,7 +20,6 @@ const navZtoA = document.getElementById('nav-z-a');
 const navMostRecent = document.getElementById('nav-most-recent');
 const navLeastRecent = document.getElementById('nav-least-recent');
 
-
 //funcion para ir a inicio
 const goHome = () => {
   search.value = "";
@@ -29,31 +28,29 @@ const goHome = () => {
   displayNews(arrNews);
 }
 
-
 //funcion para pintar numero de noticias encontradas y opciones de ordenado
 const displayFound = (data) => {
   newsSection.innerHTML =
   `<div class="box">
-  <p id="value-search" class="card-text">Search: '${search.value}'</p>
-  <div id="items-found">
-  <p class="card-text"><small class="text-muted">${data.length} resultados</small></p>
-  </div>
+    <p id="value-search" class="card-text">Search: '${search.value}'</p>
+    <div id="items-found">
+      <p class="card-text"><small class="text-muted">${data.length} resultados</small></p>
+    </div>
 
-  <div id="sort-by" class="dropdown">
-  <button id="sort-by-btn" type="button" class="btn btn-secondary">Ordenar por:</button>
-  <div id="dropdown" class="dropdown-content">
-    <a href="#">Most recent</a>
-    <a href="#">Least recent</a>
-    <a href="#">Title A - Z</a>
-    <a href="#">Title Z - A</a>
+    <div id="sort-by" class="dropdown">
+      <button id="sort-by-btn" type="button" class="btn btn-secondary">Ordenar por:</button>
+      <div id="dropdown" class="dropdown-content">
+        <a href="#">Most recent</a>
+        <a href="#">Least recent</a>
+        <a href="#">Title A - Z</a>
+        <a href="#">Title Z - A</a>
+      </div>
+    </div> 
   </div>
-</div> 
+  <p class="no-show">.</p>`;
 
-  </div>
-  <p class="no-show">.</p></div>`;
-
-let sortByBtn = document.getElementById('sort-by-btn');
-let dropdown = document.getElementById('dropdown')
+  let sortByBtn = document.getElementById('sort-by-btn');
+  let dropdown = document.getElementById('dropdown');
   localStorage.setItem("sortByBtn",sortByBtn);
   localStorage.setItem("dropdown",dropdown);
 }
@@ -86,11 +83,8 @@ const displayNews = (data) => {
 // despliega noticias de inicio
 displayNews(arrNews);
 
-
-
 //chismosa para ir a inicio
 home.addEventListener ('click', () => goHome());
-
 
 //chismosa para inpurt 'search' que llama funcion de busqueda y pintar resultados
 search.addEventListener('keyup', () => {
@@ -100,7 +94,6 @@ search.addEventListener('keyup', () => {
   displayFound(arr);
   displayNews(arr);
 });
-
 
 //chismosas para navegacion en barra lateral
 update.addEventListener('click', () => {
@@ -149,7 +142,7 @@ const sortBy = (sortBy) => {
  When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 sortByBtn.addEventListener('click', () => {
-  dropdown.classList.toggle("show");
+  dropdown.toggle(true);
 })
 
 // Close the dropdown menu if the user clicks outside of it
@@ -164,6 +157,4 @@ window.onclick = function(event) {
       }
     }
   };
-} 
-
-
+}
