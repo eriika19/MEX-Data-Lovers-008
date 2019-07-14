@@ -19,7 +19,7 @@ body {
 header {
   height: 108px;
   width: 100%;
-  display: table-row;
+  display: contents;
 }
 
 
