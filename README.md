@@ -143,5 +143,5 @@ A continuación se muestra el prototipo de baja fidelidad que se creo para hacer
 
 ## Prototipo de alta fidelidad 
 
-![perro](img-readme/perro.jpeg)
+![perro](img-readme/perro.png)
 
