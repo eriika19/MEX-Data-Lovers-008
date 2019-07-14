@@ -46,13 +46,13 @@
         <hr>
 
         <li class="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Author</a>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Title</a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
             <li>
-              <a class="sortby-options" id="nav-a-z">A - Z</a>
+              <a class="sortby-option" title="a-z">A - Z</a>
             </li>
             <li>
-              <a class="sortby-options" id="nav-z-a">Z - A</a>
+              <a class="sortby-option" title="z-a">Z - A</a>
             </li>
           </ul>
         </li>
@@ -61,10 +61,10 @@
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Date</a>
           <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
-              <a class="sortby-options" id="nav-most-recent">Most recent</a>
+              <a class="sortby-option" title="most-recent">Most recent</a>
             </li>
             <li>
-              <a class="sortby-options" id="nav-least-recent">Least recent</a>
+              <a class="sortby-option" title="least-recent">Least recent</a>
             </li>
           </ul>
         </li>
@@ -75,11 +75,11 @@
     <!-- Contenido -->
     <div id="content">
       <header id="header">
-    <!-- Barra de navegacion horizontal -->
-        
-          <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg">
+        <!-- Barra de navegacion horizontal -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg">
               <div class="container-fluid">
 
                 <div id="left-side-nav" class="">
@@ -89,7 +89,8 @@
                     <span></span>
                   </button>
                   <div id="home">
-                    <img id="nav-logo"src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016">
+                    <img id="nav-logo"
+                      src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016">
                   </div>
                 </div>
 
@@ -122,8 +123,8 @@
               </div>
             </nav>
 
-            </div>
           </div>
+        </div>
       </header>
 
       <main id="main">
@@ -169,13 +170,14 @@
 
 
   <script>
-      //Funcion para barra de navegacion lateral
+    //Funcion para barra de navegacion lateral
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
         $(this).toggleClass('active');
       });
     });
+
   </script>
 
 </body>
