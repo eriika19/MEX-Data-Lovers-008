@@ -19,7 +19,8 @@ const filter = (str) => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
   arr = window.handleData.filterData(str);
-  displayFound(arr);
+  percent = window.handleData.computeStats(arr);
+  displayFound(arr, percent);
   displayNews(arr);
 };
 
@@ -27,7 +28,7 @@ const filter = (str) => {
 const sort = (arr, sortBy) => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
-const sortedData = window.handleData.sortData(arr,sortBy);
+  const sortedData = window.handleData.sortData(arr, sortBy);
   displayFound(sortedData);
   displayNews(sortedData);
 };
@@ -38,7 +39,7 @@ for (let i = 0; i < btnChannel.length; i++) {
   btnChannel[i].addEventListener('click', () => {
     const Channel = event.target.id;
     search.value = Channel;
-    filter (Channel)
+    filter(Channel)
   })
 };
 
@@ -46,20 +47,27 @@ for (let i = 0; i < btnChannel.length; i++) {
 for (let i = 0; i < sortByOption.length; i++) {
   sortByOption[i].addEventListener('click', () => {
     const sortBy = event.target.title
-        sort(arr, sortBy);
+    sort(arr, sortBy);
   })
 };
 
 //funcion para pintar numero de noticias encontradas y opciones de ordenado
 const displayFound = (data) => {
   newsSection.innerHTML =
-  `<div class="box">
+    `<div class="box">
+  <div class="row">
+  <div class="col-md-12">
 
   <p id="value-search" class="card-text">Search: '${search.value}'</p>
   
   <div id="items-found">
   <p class="card-text"><small class="text-muted">${data.length} results</small></p>
   </div>
+
+  </div> </div>
+
+  <div class="row">
+  <div class="col-md-12">
 
   <div id="sort-by" class="dropdown">
   <button id="sort-by-btn" class="btn btn-secondary" onclick="funcDrop()">Sort by :</button>
@@ -70,10 +78,15 @@ const displayFound = (data) => {
     <a class="sort-by-item" title="z-a" >Title Z - A</a>
   </div>
 </div>
-  </div>
-  <p class="no-show">.</p>`;
-dropdown = document.getElementById('dropdown');
-sortByItem = document.getElementsByClassName('sort-by-item');
+
+<div id="percent">
+<p class="card-text"><small>${percent}% of Steam News</small></p>
+</div>
+
+</div> </div>
+  </div>`;
+  dropdown = document.getElementById('dropdown');
+  sortByItem = document.getElementsByClassName('sort-by-item');
 }
 
 
@@ -84,7 +97,7 @@ const displayNews = (data) => {
     let d = new Date(e.date);
     let date = d.toDateString();
     newsSection.insertAdjacentHTML("beforeEnd",
-  ` <div class="media news-box">
+      ` <div class="media news-box">
       <a href="${e.url}" target="_blank">
   <div class="media-body">
   <div class="card-header text-white">
@@ -114,12 +127,12 @@ const goHome = () => {
 }
 
 //chismosa para ir a inicio
-home.addEventListener ('click', () => goHome());
+home.addEventListener('click', () => goHome());
 
 
 //chismosa para inpurt 'search' que llama funcion de filtrar
 search.addEventListener('keyup', () => {
-filter(search.value)
+  filter(search.value)
 });
 
 
@@ -128,12 +141,10 @@ const funcDrop = () => {
   document.getElementById("dropdown").classList.toggle("show");
 
   //funcion para items de menu despegable. Se extrae el valor de title de la opcion seleccionada
-for (let i = 0; i < sortByItem.length; i++) {
-  sortByItem[i].addEventListener('click', () => {
-    const sortBy = event.target.title;
-    sort (arr, sortBy)
-  })
+  for (let i = 0; i < sortByItem.length; i++) {
+    sortByItem[i].addEventListener('click', () => {
+      const sortBy = event.target.title;
+      sort(arr, sortBy)
+    })
+  };
 };
-};
-
-
