@@ -19,6 +19,7 @@ body {
 header {
   height: 108px;
   width: 100%;
+  display: contents;
 }
 
 
@@ -320,7 +321,7 @@ a.article:hover {
   text-align: center;
   background-color: #0f151b3b;
   padding: 12px;
-  margin-top: -22px;
+  margin-top: 0px;
 }
 
 #video {
@@ -445,6 +446,12 @@ a.article:hover {
   MEDIAQUERIES
 ----------------------------------------------------- */
 
+@media (max-width: 1500px) {
+  .col-md-11 {
+    max-width: 90%;
+    min-width: 90%;
+  }
+}
 
 @media (max-width: 1440px) {
   .col-md-11 {
@@ -556,6 +563,16 @@ a.article:hover {
     max-width: 40%;
     min-width: 40%;
   }
+  
+  #glass {
+    height: 36px;
+    width: 36px;
+  }
+
+  #search {
+    font-size: 1.75em;
+    height: 38px;
+  }
 }
 
 @media (max-width: 1015px) {
@@ -576,15 +593,6 @@ a.article:hover {
   .col-md-11 {
     max-width: 80%;
     min-width: 80%;
-  }
-
-  #glass {
-    height: 38px;
-    width: 38px;
-  }
-
-  #search {
-    font-size: 2em
   }
 
   .img-box {
@@ -727,6 +735,10 @@ a.article:hover {
   .img-box {
     margin-top: 40px;
   }
+
+  #video {
+    height: 230px;
+  }
 }
 
 
@@ -812,17 +824,67 @@ a.article:hover {
   header {
     height: 65px;
   }
+  #video {
+    height: 205px;
+  }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 583px) {
+
+  h3 {
+    
+    font-size: 1.05em;
+  }
+
+#search {
+    font-size: 1.2em;
+    height: 27px;
+}
+
+#nav-logo {
+  height: 27.7px;
+  width: 116.4px;
+}
+
+#glass {
+  height: 27px;
+  width: 27px;
+}
+
+#home {
+  min-width: 155px;
+  max-width: 155px;
+}
+
+#left-side-nav {
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.col-sm-9 {
+  max-width: 77%;
+  min-width: 77%;
+}
+
+.col-sm-5 {
+  max-width: 46%;
+  min-width: 46%;
+}
+
+#video {
+  height: 182px;
+}
+}
+
+@media (max-width: 501px) {
   .col-sm-5 {
-    max-width: 55%;
-    min-width: 55%;
+    max-width: 42%;
+    min-width: 42%;
   }
 
   .col-sm-9 {
-    max-width: 76%;
-    min-width: 76%;
+    max-width: 72%;
+    min-width: 72%;
   }
 
   .card-header {
@@ -837,7 +899,7 @@ a.article:hover {
 
   #search {
     height: 27px;
-    font-size: 1.2em;
+    font-size: 1.05em;
   }
 
   #glass {
@@ -850,18 +912,24 @@ a.article:hover {
   }
 
   #nav-logo {
-    height: 25px;
-    width: 97px;
+    height: 24px;
+    width: 96px;
   }
-
   #home {
-    width: 150px;
+    min-width: 152px;
+    max-width: 152px;
   }
 
   #left-side-nav {
     min-width: 140px;
     max-width: 140px;
   }
+
+  #sidebarCollapse {
+    width: 31px;
+    height: 31px;
+    margin-right: 3px;
+}
 
   #video {
     height: 190px;
@@ -878,21 +946,68 @@ a.article:hover {
   .navbar-btn {
     margin-left: 5px;
   }
+  .nav-link {
+ font-size: .9em;
+  }
 
+  ul {
+    padding-inline-start: 10px;
+}
+
+.ml-auto, .mx-auto {
+  margin-left: 2px;
+}
+}
+
+@media (max-width: 460px) {
+.col-sm-5 {
+  max-width: 38%;
+  min-width: 38%;
+}
+
+.col-sm-9 {
+  max-width: 63%;
+  min-width: 63%;
+}
+
+ul {
+  padding-inline-start: 5px;
+}
+
+.ml-auto, .mx-auto {
+margin-left: 1px;
+}
+.nav-link {
+  font-size: .8em;
+   }
+
+#search {
+  font-size: .85em;
+  padding: 1px;
+}
+
+h5 {
+  font-size: .95em;
+}
+
+#home {
+  min-width: 135px;
+  max-width: 135px;
+}
+
+#left-side-nav {
+  min-width: 110px;
+  max-width: 110px;
 }
 
 
+#nav-logo {
+  height: 23px;
+  width: 92px;
+}
+}
 
 @media (max-width: 384px) {
-
-  #nav-logo {
-    height: 23px;
-    width: 92px;
-  }
-
-  #video {
-    height: 175px;
-  }
 
   #channels,
   #sort {
@@ -914,11 +1029,6 @@ a.article:hover {
     width: 40px;
   }
 
-  #left-side-nav {
-    min-width: 150px;
-    max-width: 150px;
-  }
-
   #search {
     height: 22px;
     font-size: .75em;
@@ -938,16 +1048,8 @@ a.article:hover {
     min-width: 50%;
   }
 
-  .col-sm-9 {
-    max-width: 80%;
-    min-width: 80%;
-  }
 
-  .nav-link {
-    font-size: .9em;
-  }
-
-  .nav-link:hover {
+   .nav-link:hover {
     font-size: 1em;
   }
 
@@ -959,6 +1061,52 @@ a.article:hover {
   }
 
   h3 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
+
+  #home {
+    min-width: 130px;
+    max-width: 130px;
+  }
+
+  #left-side-nav {
+    min-width: 120px;
+    max-width: 120px;
+  }
+
+  #sidebarCollapse {
+    width: 29px;
+    height: 26px;
+    margin-right: 3px;
+}
+
+  #video {
+    height: 155px;
+  }
+  .col-sm-9 {
+    max-width: 67%;
+    min-width: 67%;
+  }
+}
+
+@media (max-width: 359px) {
+  #video {
+    height: 145px;
+  }
+}
+
+@media (max-width: 327px) {
+  #video {
+    height: 135px;
+  }
+  .col-sm-9 {
+    max-width: 60%;
+    min-width: 60%;
+  }
+}
+
+@media (max-width: 301px) {
+.navbar-nav {
+  flex-direction: column-reverse;
+}
 }
