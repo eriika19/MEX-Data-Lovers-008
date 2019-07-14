@@ -19,6 +19,7 @@ body {
 header {
   height: 108px;
   width: 100%;
+  display: table-row;
 }
 
 
@@ -320,7 +321,7 @@ a.article:hover {
   text-align: center;
   background-color: #0f151b3b;
   padding: 12px;
-  margin-top: -22px;
+  margin-top: 0px;
 }
 
 #video {
