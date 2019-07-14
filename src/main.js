@@ -42,7 +42,7 @@ for (let i = 0; i < btnChannel.length; i++) {
   })
 };
 
-//funcion para items en menu despegable. Se extrae value del boton seleccionado
+//funcion para opciones de menu despegable.Se extrae el valor de title de la opcion seleccionada
 for (let i = 0; i < sortByOption.length; i++) {
   sortByOption[i].addEventListener('click', () => {
     const sortBy = event.target.title
@@ -50,37 +50,32 @@ for (let i = 0; i < sortByOption.length; i++) {
   })
 };
 
-/*for (let i = 0; i < sortByItem.length; i++) {
-  sortByItem[i].addEventListener('click', () => {
-    const sortByValue = event.target.value;
-    sortBy (arr, sortByValue)
-  })
-};*/
-
 //funcion para pintar numero de noticias encontradas y opciones de ordenado
 const displayFound = (data) => {
   newsSection.innerHTML =
   `<div class="box">
+
   <p id="value-search" class="card-text">Search: '${search.value}'</p>
+  
   <div id="items-found">
   <p class="card-text"><small class="text-muted">${data.length} results</small></p>
   </div>
 
   <div id="sort-by" class="dropdown">
-  <button id="sort-by-btn" type="button" class="btn btn-secondary" onclick="funcDrop()">Sort by:</button>
+  <button id="sort-by-btn" class="btn btn-secondary" onclick="funcDrop()">Sort by :</button>
   <div id="dropdown" class="dropdown-content">
     <a class="sort-by-item" title="most-recent" >Most recent</a>
     <a class="sort-by-item" title="least-recent" >Least recent</a>
     <a class="sort-by-item" title="a-z" >Title A - Z</a>
     <a class="sort-by-item" title="z-a" >Title Z - A</a>
   </div>
-</div> 
-
+</div>
   </div>
-  <p class="no-show">.</p></div>`;
+  <p class="no-show">.</p>`;
 dropdown = document.getElementById('dropdown');
 sortByItem = document.getElementsByClassName('sort-by-item');
 }
+
 
 
 //funcion para pintar noticias
@@ -128,23 +123,17 @@ filter(search.value)
 });
 
 
-//Funcion para ocultar y mostrar menu de sortBy
-function funcDrop() {
+//Funcion para ocultar/mostrar menu despegable sortBy y realizar ordenado
+const funcDrop = () => {
   document.getElementById("dropdown").classList.toggle("show");
-}
 
-// Funcion para desplegar menu sortBy
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName("dropdown-content");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      const openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  };
-}
+  //funcion para items de menu despegable. Se extrae el valor de title de la opcion seleccionada
+for (let i = 0; i < sortByItem.length; i++) {
+  sortByItem[i].addEventListener('click', () => {
+    const sortBy = event.target.title;
+    sort (arr, sortBy)
+  })
+};
+};
 
 

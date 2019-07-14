@@ -391,11 +391,10 @@ height: 44px;
   MENU DEPEGABLE PARA ORDENAR
   ----------------------------------------------------- */
 
-
- /* Dropdown Button */
-
-
 /* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -428,7 +427,6 @@ height: 44px;
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd}
-
 
 
 
