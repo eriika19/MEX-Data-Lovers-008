@@ -1,23 +1,22 @@
-//objeto de funciones para manipular data
-window.handleData = {
-  filterData: (str) => {
+/*funciones para manipular data*/
+const filterData = (wholeData,str) => {
     //creamos un array donde cada plabra es un elemento
     //const words = str.split(" ");
     //programamos un bucle para evaluar cada elemento(e) del array 'words'
     // return words.forEach(e => {
     //programamos un filtro para cada valor(v) dentro de las  propiedades de 'newsitems'
-    return STEAM.appnews.newsitems.filter(v => {
+    return wholeData.filter(v => {
       //se evalua la existecia de cada elemento(e) del array 'words' en la data de las propiedades de 'title', 'author' y 'feedlabel'
       return ((v.title.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
         (v.author.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
         (v.contents.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
         (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1));
     });
-  },
+  };
   // );
-  //},
+  //};
 
-  sortData: (data, sortBy) => {
+  const sortData = (data, sortBy) => {
     let sortedData;
     switch (sortBy) {
       case 'most-recent':
@@ -44,12 +43,15 @@ window.handleData = {
         alert('Hubo una falla. Por favor, intenta de nuevo.');
     }
     return sortedData;
-  },
+  };
 
-  computeStats: (data) => {
-    const steamNews = STEAM.appnews.newsitems;
+  const computeStats = (wholeData,data) => {
     // obtenemos el porcentaje de numero de resultados de busqueda obtenidos
-    const percentStat = data.length * 100 / steamNews.length;
+    const percentStat = data.length * 100 / wholeData.length;
     return percentStat;
-  }
-};
+  };
+
+//Agregamos funciones al objeto global
+window.filterData = filterData;
+window.sortData = sortData;
+window.computeStats = computeStats;
