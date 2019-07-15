@@ -5,12 +5,15 @@
 - [Introducción](#introducción)
 - [Descripción general del proyecto](#descripción-general-del-proyecto)
 - [Avance](#avance)
-- [Información recabada](#información-recabada)
+- [Profudización](#profundización)
+- [Encuestas](#información-recabada)
 - [User Persona](#user-persona)
 - [Definción de producto](#definición-de-producto)
 - [Pains y Gains](#pains-y-gains)
 - [Historias de Usuario](#historias-de-usuario)
 - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
+- [Prototipo de alta fidelidad](#prototipo-de-alta-fidelidad)
+- [Checklist](#checklist)
 
 ---
 ## Introducción
@@ -25,30 +28,15 @@ Actualmente, hay más de 3.000 juegos disponibles en Steam y 75 millones de cuen
 
 ---
 
-## Descripción general del proyecto
+## Definición del producto
 
-Este proyecto se trabajó por la dupla conformada por María Itzel Erika Enciso Ibáñez y Monserratt Cuevas Serrano; se busca *construir una _página web_ para visualizar el conjunto de datos de noticias de la página de STEAM*.
+### Profundización
 
+Se realizaron 12 encuestas que nos ayudaron a recabar información sobre: las necesidades, rango de edad, sexo, preferencias,  _pains, gains_ y obtener _insights_ que nos ayudaron a empatizar con el usuario para poder contruir una interfaz que se adecúe a sus necesidades.
 
-## Avance
+#### Encuestas
 
-Se realizaron 12 encuestas que nos ayudaron a recabar información sobre: las necesidades, rango de edad, sexo, preferencias,  _pains, gains_ y comportamientos de los usuarios, y así, poder contruir una interfaz que se adecúe a las necesidades del usuario.
-
-A partir del análisis de la información recabada se contruyó un prototipo de papel sobre la interfaz de la página web. Este prototipo será testeado con, por lo menos, 5 potenciales usuarios de nuestra página web para verificar usabilidad, intuitividad y diseño  del prototipo.
-
-Como entregable final crearémos una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**.
-
-Especificamente se buscará que la página web sea capaz de:
-- [ ] Presentar la data en orden cronológico
-- [ ] Filtrar la data por título de la notica
-- [ ] Filtrar la data por autor de la noticia
-- [ ] Organizar la data por etiquetas (_canales_)
-
-
-### Información recabada
-
-Se realizó la encuesta a 6 hombres y 6 mujeres, 2 de las mujeres no conocían ninguno de los sitios web de noticias de videojuegos y no jugaban videojuegos, por lo cuál, se eliminaron estás encuestas; quedándonos con sólo 10 encuestas de las cuáles se rescató la siguiente información:
+Se realizó encuestas a 6 hombres y 6 mujeres, 2 de las mujeres no conocían ninguno de los sitios web de noticias de videojuegos y no jugaban videojuegos, por lo cuál, se eliminaron estás encuestas; quedándonos con sólo 10 encuestas de las cuáles se rescató la siguiente información:
 
 
 ![edad](img-readme/edad.png)
@@ -79,12 +67,27 @@ El 55.6% de los usuarios visitan de 1 a 3 veces por semana estos sitios. Mientra
 
 Sólo el 66.7% de los usuarios conocen STEAM.
 
+### Definición
 
-## User Persona
+#### Pains y Gains
+
+#### `Pains`
+- Anuncios
+- Falta de actualización
+- Sobrecarga de información
+- Falta de publicidad a desarolladores menores
+
+#### `Gains`
+- Mantenerse actualizado constantemente
+- Enterarse de rebajas y eventos
+- Encontrar actualizaciones de sus juegos favoritos
+- Encontrar trucos y claves para sus juegos favoritos
+
+#### User Persona
 
 ![Persona](img-readme/persona.png)
 
-## Definición de producto
+### Ideación
 
 Mateo necesita algo que los mantenga actualizados que cumpla las siguientes características:
 
@@ -94,39 +97,84 @@ Mateo necesita algo que los mantenga actualizados que cumpla las siguientes cara
 - Navegación directa
 - Mobile first
 
-## Pains y Gains
+### Propuesta de valor
 
-### Pains
-- Anuncios
-- Falta de actualización
-- Sobrecarga de información
-- Falta de publicidad a desarolladores menores
+A partir del análisis de la información recabada se definieron las siguientes propuestas de valor:
 
-### Gains
-- Mantenerse actualizado constantemente
-- Enterarse de rebajas y eventos
-- Encontrar actualizaciones de sus juegos favoritos
-- Encontrar trucos y claves para sus juegos favoritos
+- Crear portal de noticias de fácil y rápido acceso; sin anuncios incluidos a través del cobro de una suscripción mensual.
 
-## Historias de usuario
+- Utilizar el mismo diseño de la página oficial de STEAM con el propósito de ofrecer al usuario una iterfaz con la cuál se sienta familiarizado.
+
+- Crear un página web que permite **visualizar la data, filtrarla, ordenarla y hacer un cálculo agregado**, cumpliendo los siguientes puntos:
+    - [ ] Una interfaza limpia e intuitiva con la que el usuario se sienta familiarizado y permita visualizar la data.
+    - [ ] Filtrar la data por palabra a través de una barra de búsqueda.
+    - [ ] Ordenar la data en cronológicamente.
+    - [ ] Ordenar la data en alfabéticamente.
+    - [ ] Organizar la data por etiquetas (_channels_) para una navegación más rápida.
+    - [ ] Realizar un cálculo agregado indicando al usuario el porcentaje de noticias que cumple con su criterio de búsqueda.
+
+- Crear una página que pueda visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
+   tablets y desktops.
+
+### Historias de usuario
 
 
-Yo usuario busco manterme actualizado con la noticias publicadas por mi autor o blogger favoritx:
- Entro a la pagina web de noticias de STEAM, localizo la barra de busqueda e ingreso el nombre de mi autor, blogger favorito. El sitio muestra un listado de todas las noticias de mi autor o blogger favoritx.
+Yo usuario busco manterme actualizado con la noticias publicadas por mi bloggerx favoritx:
+ Entro a la página web de STEAM NEWS, localizo la barra de búsqueda e ingreso el nombre de mi bloggerx favoritx. El sitio muestra un listado de todas las noticias de bloggerx favoritx.
 
 *Criterio de Aceptacón:*
 
-La pagína web debe tener una barra de busqueda donde pueda localizar rapidamente,a mi autor favorito,o blogger y que contenga menos anuncios.
+La página web debe tener una barra de búsqueda que pueda localizar rápidamente e ingresar el nombre de mi autor/blogger elegido.
 
 *Definición de Terminado:*
 
-Los nombres de los autores y las fechas de los juegos apareceran en la barra de desplpara que sea más facil localizar a cada uno de ellos.
+Al ingresar el nombre de un autor o blogger en el campo de búsqueda aparecen todas las noticias realcionadas con ese autor/blogger.
 
+---
 
+## Diseño de la interfaz de usuario
 
+A partir de la información recabada se creó un prototipo de papel sobre la interfaz de la página web. Este prototipo fue testeado con 5 potenciales usuarios para verificar usabilidad, intuitividad y diseño del prototipo.
 
-## Prototipo de baja fidelidad
-
-A continuación se muestra el prototipo de baja fidelidad que se creo para hacer el primer testeo de la interfaz.
+### Prototipo de baja fidelidad
 
 ![prototipo](img-readme/prototipo.jpeg)
+
+
+### Prototipo de alta fidelidad
+
+![prototipo](img-readme/prototipo-alta.png)
+
+
+#### Testeos de usabilidad
+En el testeo con el prototipo de baja fidelidad se detecto que el usuario no encontraba rapidamente la barra de búsqueda, así como las opciones de filtrado por canales por lo que se decidió rediseñar la interfaz. Se cambiaron colores y orientaciones de ambas funcionalidades con el fin de volver la interfaz más intutitiva.
+
+---
+
+## Alcances
+
+Este proyecto cumple con los siguientes alcances:
+
+- [✔] Usa VanillaJS.
+- [✔] No hace uso de `this`.
+- [✔] Pasa linter (`npm pretest`)
+- [✔] Pasa tests (`npm test`)
+- [✔] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+      lines y branches.
+- [✔] Incluye _Definición del producto_ clara e informativa en `README.md`.
+- [✔] Incluye historias de usuario en `README.md`.
+- [✔] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+      `README.md`.
+- [✔] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+      en `README.md`.
+- [✔] Incluye el listado de problemas que detectaste a través de tests de
+      usabilidad en el `README.md`.
+- [✔] UI: Muestra lista y/o tabla con datos y/o indicadores.
+- [✔] UI: Permite ordenar data por uno o más campos (asc y desc).
+- [✔] UI: Permite filtrar data en base a una condición.
+- [✔] Una interfaza limpia e intuitiva con la que el usuario se sienta familiarizado y permita visualizar la data.
+- [✔] Filtrar la data por palabra a través de una barra de búsqueda.
+- [✔] Ordenar la data en cronológicamente.
+- [✔] Ordenar la data en alfabéticamente.
+- [✔] Organizar la data por etiquetas (_channels_) para una navegación más rápida.
+- [✔] Realizar un cálculo agregado indicando al usuario el porcentaje de noticias que cumple con su criterio de búsqueda.

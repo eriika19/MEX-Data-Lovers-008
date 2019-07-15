@@ -41,8 +41,8 @@ window.handleData = {
         })).reverse();
         break;
       default:
-        alert('Hubo una falla. Por favor, intenta de nuevo.')
-    };
+        alert('Hubo una falla. Por favor, intenta de nuevo.');
+    }
     return sortedData;
   },
 
