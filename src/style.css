@@ -281,10 +281,23 @@ a.article:hover {
   border-radius: 2px;
 }
 
+.col-glass {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  }
+
 #glass {
   height: 41px;
   width: 41px;
-  float: right;
+}
+
+.col-glass {
+position: relative;
+min-height: 1px;
+padding-right: 0;
+padding-left: 0;
+float: left;
 }
 
 .nav-link {
@@ -327,10 +340,10 @@ a.article:hover {
   height: 270px;
 }
 
-.margen-video {
+.margin-video {
   position: relative;
   z-index: -100;
-  margin-top: 50px !important;
+  margin-top: 20px !important;
 }
 
 /* ---------------------------------------------------
@@ -356,7 +369,8 @@ a.article:hover {
 
 .box {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .card-header {
@@ -370,7 +384,7 @@ a.article:hover {
 }
 
 .media {
-  margin: 55px 0;
+  margin: 0 0 50px 0;
   border-radius: 7px;
   border: 1px solid #d2d8f32d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
