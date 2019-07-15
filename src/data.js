@@ -10,7 +10,8 @@ const filterData = (wholeData,str) => {
       return ((v.title.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
         (v.author.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
         (v.contents.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
-        (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1));
+        (v.feedlabel.toLowerCase().indexOf(str.toLowerCase()) > -1) ||
+        (v.feedname.toLowerCase().indexOf(str.toLowerCase()) > -1));
     });
   };
   // );
@@ -29,18 +30,15 @@ const filterData = (wholeData,str) => {
         sortedData = data.sort((a, b) => {
           if (a.title > b.title) return 1;
           if (a.title < b.title) return -1;
-          return 0;
         });
         break;
       case 'z-a':
         sortedData = (data.sort((a, b) => {
           if (a.title > b.title) return 1;
-          if (a.title < b.title) return -1;
-          return 0;
-        })).reverse();
+          if (a.title < b.title) return -1;})).reverse();
         break;
       default:
-        alert('Hubo una falla. Por favor, intenta de nuevo.');
+        sortedData = 'Hubo una falla. Por favor, intenta de nuevo.';
     }
     return sortedData;
   };
