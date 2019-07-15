@@ -49,8 +49,7 @@ window.handleData = {
   computeStats: (data) => {
     const steamNews = STEAM.appnews.newsitems;
     // obtenemos el porcentaje de numero de resultados de busqueda obtenidos
-    percentStat = data.length * 100 / steamNews.length;
+    const percentStat = data.length * 100 / steamNews.length;
     return percentStat;
-  },
-
-}
+  }
+};

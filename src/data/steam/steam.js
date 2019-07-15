@@ -1,7 +1,8 @@
 var STEAM = {
   "appnews": {
     "appid": 440,
-    "newsitems": [{
+    "newsitems": [
+      {
         "gid": "3316234163932872071",
         "title": "Operation Canteen Crasher!",
         "url": "https://steamstore-a.akamaihd.net/news/externalpost/tf2_blog/3316234163932872071",

@@ -178,3 +178,6 @@ Este proyecto cumple con los siguientes alcances:
 - [✔] Ordenar la data en alfabéticamente.
 - [✔] Organizar la data por etiquetas (_channels_) para una navegación más rápida.
 - [✔] Realizar un cálculo agregado indicando al usuario el porcentaje de noticias que cumple con su criterio de búsqueda.
+- [✔] Crear una página que pueda visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
+   tablets y desktops.
+
