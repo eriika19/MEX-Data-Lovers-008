@@ -3,17 +3,23 @@
 ## Índice
 
 - [Introducción](#introducción)
-- [Descripción general del proyecto](#descripción-general-del-proyecto)
-- [Avance](#avance)
-- [Profudización](#profundización)
-- [Encuestas](#información-recabada)
+- [Definción del producto](#definición-del-producto)
+- [Profundización](#profundización)
+- [Encuestas](#encuestas)
+- [Definición](#definición)
+- [Pains y Gains](#pains)
+- [Pains](#pains-y-gains)
+- [Gains](#gains)
 - [User Persona](#user-persona)
-- [Definción de producto](#definición-de-producto)
-- [Pains y Gains](#pains-y-gains)
+- [Ideación](#ideación)
+- [Propuestas de valor](#propuestas-de-valor)
 - [Historias de Usuario](#historias-de-usuario)
+- [Diseño de la interfaz de usuario](#diseño-de-la-interfaz-de-usuario)
 - [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
 - [Prototipo de alta fidelidad](#prototipo-de-alta-fidelidad)
-- [Checklist](#checklist)
+- [Testeos de usabilidad](#testeos-de-usabilidad)
+- [Producto final](#producto-final)
+- [Alcances](#alcances)
 
 ---
 ## Introducción
@@ -97,7 +103,7 @@ Mateo necesita algo que los mantenga actualizados que cumpla las siguientes cara
 - Navegación directa
 - Mobile first
 
-### Propuesta de valor
+### Propuestas de valor
 
 A partir del análisis de la información recabada se definieron las siguientes propuestas de valor:
 
@@ -146,14 +152,23 @@ A partir de la información recabada se creó un prototipo de papel sobre la int
 ![prototipo](img-readme/prototipo-alta.png)
 
 
-#### Testeos de usabilidad
+### Testeos de usabilidad
 En el testeo con el prototipo de baja fidelidad se detecto que el usuario no encontraba rapidamente la barra de búsqueda, así como las opciones de filtrado por canales por lo que se decidió rediseñar la interfaz. Se cambiaron colores y orientaciones de ambas funcionalidades con el fin de volver la interfaz más intutitiva.
 
 ---
 
-## Alcances
+## Producto final
 
-Este proyecto cumple con los siguientes alcances:
+Se muestran dos perspectivas del producto final:
+
+![producto1](img-readme/producto1.png)
+
+
+![producto2](img-readme/producto2.png)
+
+### Alcances
+
+El prodcuto final cumplió con los siguientes alcances:
 
 - [✔] Usa VanillaJS.
 - [✔] No hace uso de `this`.
@@ -178,6 +193,4 @@ Este proyecto cumple con los siguientes alcances:
 - [✔] Ordenar la data en alfabéticamente.
 - [✔] Organizar la data por etiquetas (_channels_) para una navegación más rápida.
 - [✔] Realizar un cálculo agregado indicando al usuario el porcentaje de noticias que cumple con su criterio de búsqueda.
-- [✔] Crear una página que pueda visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
-   tablets y desktops.
-
+- [✔] Interfaz que pueda visualizarse sin problemas desde distintos tamaños de pantallas: móviles, tablets y desktops.
