@@ -1,13 +1,14 @@
+//Definimos la data completa que se va a manipular
+const wholeData = window.STEAM.appnews.newsitems;
 
 //secciones y búsqueda
-const arrNews = STEAM.appnews.newsitems;
 const home = document.getElementById('home');
 const videoSection = document.getElementById('video-section');
 const newsSection = document.getElementById('news-section');
 const search = document.getElementById('search');
 
-//let dropdown;
-let arr = arrNews;
+//variables
+let arrNews = wholeData;
 let percent;
 
 //traer items por nombre de clase
@@ -16,21 +17,21 @@ const sortByOption = document.getElementsByClassName('sortby-option');
 let sortByItem = [];
 
 
-//funcion para filtrar que llama a la funcion de itemes encontrados y desplegar noticias
-const filter = (str) => {
+//funcion para filtrar que llama a la funcion de items encontrados y desplegar noticias
+const filter = (wholeData, str) => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
-  arr = window.handleData.filterData(str);
-  percent = window.handleData.computeStats(arr);
-  displayFound(arr, percent);
-  displayNews(arr);
+  arrNews = window.filterData(wholeData,str);
+  percent = window.computeStats(wholeData,arrNews);
+  displayFound(arrNews);
+  displayNews(arrNews);
 };
 
 //funcion para ordenar
-const sort = (arr, sortBy) => {
+const sort = (arrNews, sortBy) => {
   newsSection.innerHTML = "";
   videoSection.classList.add("hide");
-  const sortedData = window.handleData.sortData(arr, sortBy);
+  const sortedData = window.sortData(arrNews, sortBy);
   displayFound(sortedData);
   displayNews(sortedData);
 };
@@ -41,7 +42,7 @@ for (let i = 0; i < btnChannel.length; i++) {
   btnChannel[i].addEventListener('click', () => {
     const Channel = event.target.id;
     search.value = Channel;
-    filter(Channel);
+    filter(wholeData,Channel);
   });
 }
 
@@ -49,7 +50,7 @@ for (let i = 0; i < btnChannel.length; i++) {
 for (let i = 0; i < sortByOption.length; i++) {
   sortByOption[i].addEventListener('click', () => {
     const sortBy = event.target.title;
-    sort(arr, sortBy);
+    sort(arrNews, sortBy);
   });
 }
 
@@ -114,25 +115,23 @@ const displayNews = (data) => {
 };
 
 // despliega noticias de inicio
-displayNews(arrNews);
+displayNews(wholeData);
 
 //funcion para ir a inicio
 const goHome = () => {
   search.value = "";
   videoSection.classList.remove("hide");
   newsSection.innerHTML = "";
-  displayNews(arrNews);
+  displayNews(wholeData);
 };
 
 //chismosa para ir a inicio
 home.addEventListener('click', () => goHome());
 
-
-//chismosa para inpurt 'search' que llama funcion de filtrar
+//chismosa para input 'search' que llama a la funcion de filtrar
 search.addEventListener('keyup', () => {
-  filter(search.value);
+  filter(wholeData,search.value);
 });
-
 
 //Funcion para ocultar/mostrar menu despegable sortBy y realizar ordenado
 const funcDrop = () => {
@@ -142,7 +141,7 @@ const funcDrop = () => {
   for (let i = 0; i < sortByItem.length; i++) {
     sortByItem[i].addEventListener('click', () => {
       const sortBy = event.target.title;
-      sort(arr, sortBy);
+      sort(arrNews, sortBy);
     });
   }
 };
