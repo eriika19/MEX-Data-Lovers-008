@@ -120,7 +120,7 @@ const dataSTEAM = [
       expect([window.sortData(dataSTEAM,'z-a')[0]]).toEqual([sortZtoA[0]]);
     });
 
-    it('Debería retornar el mensaje el string "Hubo una falla. Por favor, intenta de nuevo."', () => {
+    it('Debería retornar el mensaje "Hubo una falla. Por favor, intenta de nuevo."', () => {
       expect(window.sortData(dataSTEAM,'song')).toEqual('Hubo una falla. Por favor, intenta de nuevo.');
     });
   });
