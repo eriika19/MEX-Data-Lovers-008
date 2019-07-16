@@ -9,7 +9,7 @@ const search = document.getElementById('search');
 
 //variables
 let arrNews = wholeData;
-let percent;
+let percent = 100;
 
 //traer items por nombre de clase
 const btnChannel = document.getElementsByClassName('channel');
