@@ -41,22 +41,10 @@ foundData[item].forEach(element => {
         sortedData = (data.sort((a, b) => new Date(b.date) - new Date(a.date))).reverse();
         break;
       case 'a-z':
-        sortedData = data.sort((a,b) => {
-          if (a.title > b.title) {
-            return 1;
-          }
-          return -1;
-  //      else return 0;
-        });
+        sortedData = data.sort((a,b) => a.title > b.title ? 1 : -1);
         break;
       case 'z-a':
-        sortedData = data.sort((a,b) => {
-          if (a.title < b.title) {
-            return 1;
-          }
-          return -1;
- //       else return 0;
-        });
+        sortedData = data.sort((a,b) => a.title < b.title ? 1 : -1);
         break;
       default:
         sortedData = 'Hubo una falla. Por favor, intenta de nuevo.';
